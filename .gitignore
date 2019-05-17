@@ -1,3 +1,8 @@
+
+# ignore the plugged/ directory as vim-plug
+# doesn't use `git submodules`
+/plugged/
+
 /tmp/
 /undodir/
 /view/
