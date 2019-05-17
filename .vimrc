@@ -20,13 +20,17 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'wimstefan/Lightning'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'yegappan/mru'
 " call dein#add( 'masukomi/vim-markdown-folding' )
 Plug 'dag/vim-fish'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'godlygeek/tabular'
+Plug 'vim-scripts/restore_view.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
+Plug 'tpope/vim-surround'
+Plug 'spf13/vim-autoclose'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'yegappan/mru'
+"Plug 'ctrlpvim/ctrlp.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -125,6 +129,11 @@ if !has('nvim')
     endif
 endif
 
+if has('mouse')
+  set mouse=a
+endif
+
+
 " 
 " Save a file as root
 "
@@ -154,26 +163,6 @@ map <SPACE> <leader>
 
 
 
-"----------------- begin plugins -----------------------------------------------
-
-" " The list of plugins to load
-" Plug 'tpope/vim-commentary'
-" Plug 'mbbill/undotree'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'wimstefan/Lightning'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'junegunn/fzf.vim'
-" Plug 'yegappan/mru'
-" Plug 'masukomi/vim-markdown-folding'
-
-" Plug 'dag/vim-fish'
-" Plug 'jlanzarotta/bufexplorer'
-
-" Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown'
-
-"----------------- end plugins -------------------------------------------------
 
 "not sure I should set it
 "set t_Co=256			" 256 colors, terrible for most themes, but best for Tomorrow-Night
@@ -298,9 +287,9 @@ map <leader>tm :tabmove
 map <leader>t<leader> :tabnext 
 
 
-au BufWinLeave * mkview
-" au BufWinEnter * silent loadview
 "autocmd FileType markdown set foldexpr=StackedMarkdownFolds()
 
 
-
+nnoremap <leader>p :History<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>t :Files<CR>
