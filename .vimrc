@@ -27,9 +27,10 @@ Plug 'vim-scripts/restore_view.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
 Plug 'tpope/vim-surround'
-Plug 'spf13/vim-autoclose'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'yegappan/mru'
+" Plug 'spf13/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'jlanzarotta/bufexplorer'
+" Plug 'yegappan/mru'
 "Plug 'ctrlpvim/ctrlp.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
