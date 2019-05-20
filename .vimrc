@@ -74,6 +74,7 @@ if !has('nvim')
     " set foldlevelstart=10   " open most folds by default
     " set foldnestmax=10      " 10 nested fold max
     " set foldmethod=indent   " fold based on indent level
+    set foldmethod=manual
 
     set fsync                          " call fsync() for robust file saving
     set hidden 
