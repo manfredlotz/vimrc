@@ -45,90 +45,104 @@ syntax enable
 
 
 if !has('nvim')
-    filetype off                  " required
-    filetype plugin on
-    filetype indent on
+  filetype off                  " required
+  filetype plugin on
+  filetype indent on
 
-    syntax on
+  syntax on
 
-"   good tips: https://dougblack.io/words/a-good-vimrc.html
+  set autoindent                     " copy indent from the previous line
+  set autoread                       " notice if a file was changed from the outside
+  set belloff=all                    " disable the bell
 
-    set number
-    set relativenumber
-
-
-    set autoindent                     " copy indent from the previous line
-    set autoread                       " notice if a file was changed from the outside
-    set autowrite                      " write a modified buffer on each :Next, ...
-
-
-    " backspace=2 is the same as the following statement
-    set backspace=indent,eol,start     " modern backspace behavior
-    set belloff=all                    " disable the bell
-    set complete-=i                    " don't scan current on included files for completion
-    set encoding=utf-8                 " set default encoding
-    set expandtab
-    set formatoptions=tcqj             " more intuitive autoformatting
-
-    " set foldenable          " enable folding
-    " set foldlevelstart=10   " open most folds by default
-    " set foldnestmax=10      " 10 nested fold max
-    " set foldmethod=indent   " fold based on indent level
-    set foldmethod=manual
-
-    set fsync                          " call fsync() for robust file saving
-    set hidden 
-    set history=10000
-    set hlsearch                       " highlight search results
-    set ignorecase                     " ignore case when searching
-    set incsearch                      " move cursor as you type when searching
-    set shiftwidth=2
-    set smartcase   " when searching try to be smart
-    set smarttab                       " tab setting aware <tab> key
-    set softtabstop=2
-    set tabstop=2
-    set ttyfast     " indicates that our connection is fast
-   
-    " set scrolljump=5                " lines to scroll when cursor leaves screen
-    " set scrolloff=3                 " minimum lines to keep above and below cursor
-    " set scrollopt=ver,jump
-    noremap <S-Up> <Up>
-    noremap <S-Down> <Down>
+  set complete-=i                    " don't scan current on included files for completion
+  set encoding=utf-8                 " set default encoding
+  set formatoptions=tcqj             " more intuitive autoformatting
+  set history=10000
 
 
-    set wildmenu                    " Enable enhanced tab autocomplete.
-    set wildignore=*.bak,*.o,*.e,*.pyc,*~ " wildmenu: ignore these extensions
-    set wildmode=list:longest,full  " Complete till longest string, then open menu.
-    set lazyredraw          " redraw only when we need to.
-    set showmatch           " highlight matching [{()}]
+  "   good tips: https://dougblack.io/words/a-good-vimrc.html
+
+  set number
+  set relativenumber
 
 
-    " use system clipboard
-    "set clipboard=unnamed
-    set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
-
-    " colemak no special actions defined currently 
-    " noremap h <NOP>
-    " noremap j <NOP>
-"    set langmap=li
-    " noremap k <NOP>
-    " noremap l <NOP>
-
-    " Be smart when using tabs ;)
-    set smarttab
+  set autowrite                      " write a modified buffer on each :Next, ...
+  set hlsearch                       " highlight search results
 
 
-    " Linebreak on 100 characters
-    set lbr
-    set tw=100
+  " backspace=2 is the same as the following statement
+  set backspace=indent,eol,start     " modern backspace behavior
+  set expandtab
 
-    set ai "Auto indent
-    set si "Smart indent
-    set wrap "Wrap lines
+  " set foldenable          " enable folding
+  " set foldlevelstart=10   " open most folds by default
+  " set foldnestmax=10      " 10 nested fold max
+  " set foldmethod=indent   " fold based on indent level
+  " set foldmethod=manual
 
-    if has('gui_running')
-        set guifont=Cousine\ Regular\ 11
-    endif
+  let g:vim_markdown_folding_disabled = 1
+
+  set hidden 
+  set ignorecase                     " ignore case when searching
+  set incsearch                      " move cursor as you type when searching
+  set shiftwidth=2
+  set smartcase   " when searching try to be smart
+  set smarttab                       " tab setting aware <tab> key
+  set softtabstop=2
+  set tabstop=2
+  set ttyfast     " indicates that our connection is fast
+
+  set wildmenu                    " Enable enhanced tab autocomplete.
+  set lazyredraw          " redraw only when we need to.
+  set showmatch           " highlight matching [{()}]
+
+
+  " use system clipboard
+  "set clipboard=unnamed
+  set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
+
+  " colemak no special actions defined currently 
+  " noremap h <NOP>
+  " noremap j <NOP>
+  "    set langmap=li
+  " noremap k <NOP>
+  " noremap l <NOP>
+
+  " Be smart when using tabs ;)
+  set smarttab
+
+
+  " Linebreak on 100 characters
+  set lbr
+  set tw=100
+
+  set ai "Auto indent
+  set wrap "Wrap lines
+
+  " 
+  " differently set in nvim
+  "
+  set fsync                          " call fsync() for robust file saving
+  " langnoremap
+endif
+
+
+set wildignore=*.bak,*.o,*.e,*.pyc,*~ " wildmenu: ignore these extensions
+set wildmode=list:longest,full  " Complete till longest string, then open menu.
+
+set smartindent
+
+  
+
+" set scrolljump=5                " lines to scroll when cursor leaves screen
+" set scrolloff=3                 " minimum lines to keep above and below cursor
+" set scrollopt=ver,jump
+noremap <S-Up> <Up>
+noremap <S-Down> <Down>
+
+if has('gui_running')
+  set guifont=Cousine\ Regular\ 11
 endif
 
 if has('mouse')
@@ -150,8 +164,8 @@ set noswapfile
 
 set undofile
 if !isdirectory($HOME . "/.vim/undodir")
-    echo "create"
-    call mkdir($HOME . "/.vim/undodir", "p")
+  echo "create"
+  call mkdir($HOME . "/.vim/undodir", "p")
 endif
 set undodir=~/.vim/undodir//        " enable persistent-undo
 
@@ -180,16 +194,16 @@ let g:airline_theme = 'papercolor'
 
 
 
-	" Suggested color names (these are available on most systems):
-	"     Red		LightRed	DarkRed
-	"     Green	LightGreen	DarkGreen	SeaGreen
-	"     Blue	LightBlue	DarkBlue	SlateBlue
-	"     Cyan	LightCyan	DarkCyan
-	"     Magenta	LightMagenta	DarkMagenta
-	"     Yellow	LightYellow	Brown		DarkYellow
-	"     Gray	LightGray	DarkGray
-	"     Black	White
-	"     Orange	Purple		Violet
+" Suggested color names (these are available on most systems):
+"     Red		LightRed	DarkRed
+"     Green	LightGreen	DarkGreen	SeaGreen
+"     Blue	LightBlue	DarkBlue	SlateBlue
+"     Cyan	LightCyan	DarkCyan
+"     Magenta	LightMagenta	DarkMagenta
+"     Yellow	LightYellow	Brown		DarkYellow
+"     Gray	LightGray	DarkGray
+"     Black	White
+"     Orange	Purple		Violet
 
 "----------------- end configure vimwiki ---------------------------------------
 "
@@ -210,8 +224,8 @@ nnoremap <F5> :UndotreeToggle<cr>
 cnoreabbrev w update 
 
 function! UpdateQ()
-    update
-    quit
+  update
+  quit
 endfunction
 
 cnoreabbrev wq call UpdateQ()
@@ -266,10 +280,10 @@ endfunction
 " (happens when dropping a file on gvim).
 "­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
 if has("auto md")
-    autocmd BufReadPost *
-                \ if line("'\"") > 0 && line("'\"") <= line("$") |
-                \ exe "normal! g`\"" |
-                \ endif
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \ exe "normal! g`\"" |
+        \ endif
 endif " has("auto md")
 
 
