@@ -2,9 +2,8 @@ scriptencoding utf-8
 
 
 
-"dein Scripts-----------------------------
 if &compatible
-  set nocompatible               " Be iMproved
+	set nocompatible               " Be iMproved
 endif
 
 " Plugins will be downloaded under the specified directory.
@@ -20,7 +19,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'wimstefan/Lightning'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" call dein#add( 'masukomi/vim-markdown-folding' )
+Plug 'pbogut/fzf-mru.vim'
+
 Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'vim-scripts/restore_view.vim'
@@ -45,95 +45,98 @@ syntax enable
 
 
 if !has('nvim')
-  filetype off                  " required
-  filetype plugin on
-  filetype indent on
+	filetype off                  " required
+	filetype plugin on
+	filetype indent on
 
-  syntax on
+	syntax on
 
-  set autoindent                     " copy indent from the previous line
-  set autoread                       " notice if a file was changed from the outside
-  set belloff=all                    " disable the bell
+	set autoindent                     " copy indent from the previous line
+	set autoread                       " notice if a file was changed from the outside
+	set belloff=all                    " disable the bell
 
-  set complete-=i                    " don't scan current on included files for completion
-  set encoding=utf-8                 " set default encoding
-  set formatoptions=tcqj             " more intuitive autoformatting
-  set history=10000
-
-
-  "   good tips: https://dougblack.io/words/a-good-vimrc.html
-
-  set number
-  set relativenumber
+	set complete-=i                    " don't scan current on included files for completion
+	set encoding=utf-8                 " set default encoding
+	set formatoptions=tcqj             " more intuitive autoformatting
+	set history=10000
 
 
-  set autowrite                      " write a modified buffer on each :Next, ...
-  set hlsearch                       " highlight search results
+	"   good tips: https://dougblack.io/words/a-good-vimrc.html
+
+	set number
+	set relativenumber
 
 
-  " backspace=2 is the same as the following statement
-  set backspace=indent,eol,start     " modern backspace behavior
-  set expandtab
-
-  " set foldenable          " enable folding
-  " set foldlevelstart=10   " open most folds by default
-  " set foldnestmax=10      " 10 nested fold max
-  " set foldmethod=indent   " fold based on indent level
-  " set foldmethod=manual
-
-  let g:vim_markdown_folding_disabled = 1
-
-  set hidden 
-  set ignorecase                     " ignore case when searching
-  set incsearch                      " move cursor as you type when searching
-  set shiftwidth=2
-  set smartcase   " when searching try to be smart
-  set smarttab                       " tab setting aware <tab> key
-  set softtabstop=2
-  set tabstop=2
-  set ttyfast     " indicates that our connection is fast
-
-  set wildmenu                    " Enable enhanced tab autocomplete.
-  set lazyredraw          " redraw only when we need to.
-  set showmatch           " highlight matching [{()}]
+	set autowrite                      " write a modified buffer on each :Next, ...
+	set hlsearch                       " highlight search results
 
 
-  " use system clipboard
-  "set clipboard=unnamed
-  set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
+	" backspace=2 is the same as the following statement
+	set backspace=indent,eol,start     " modern backspace behavior
 
-  " colemak no special actions defined currently 
-  " noremap h <NOP>
-  " noremap j <NOP>
-  "    set langmap=li
-  " noremap k <NOP>
-  " noremap l <NOP>
+	" set foldenable          " enable folding
+	" set foldlevelstart=10   " open most folds by default
+	" set foldnestmax=10      " 10 nested fold max
+	" set foldmethod=indent   " fold based on indent level
+	" set foldmethod=manual
 
-  " Be smart when using tabs ;)
-  set smarttab
+	let g:vim_markdown_folding_disabled = 1
+
+	set hidden 
+	set ignorecase                     " ignore case when searching
+	set incsearch                      " move cursor as you type when searching
+	set smartcase   " when searching try to be smart
+	set smarttab                       " tab setting aware <tab> key
+	set shiftwidth=2
+	set softtabstop=2
+	set tabstop=2
+	set ttyfast     " indicates that our connection is fast
+
+	set wildmenu                    " Enable enhanced tab autocomplete.
+	set lazyredraw          " redraw only when we need to.
+	set showmatch           " highlight matching [{()}]
 
 
-  " Linebreak on 100 characters
-  set lbr
-  set tw=100
+	" use system clipboard
+	"set clipboard=unnamed
+	set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
 
-  set ai "Auto indent
-  set wrap "Wrap lines
+	" colemak no special actions defined currently 
+	" noremap h <NOP>
+	" noremap j <NOP>
+	"    set langmap=li
+	" noremap k <NOP>
+	" noremap l <NOP>
 
-  " 
-  " differently set in nvim
-  "
-  set fsync                          " call fsync() for robust file saving
-  " langnoremap
+	" Be smart when using tabs ;)
+	set smarttab
+
+
+	" Linebreak on 100 characters
+	set lbr
+	set tw=100
+
+	set ai "Auto indent
+	set wrap "Wrap lines
+
+	" 
+	" differently set in nvim
+	"
+	set fsync                          " call fsync() for robust file saving
+	" langnoremap
 endif
 
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
 
 set wildignore=*.bak,*.o,*.e,*.pyc,*~ " wildmenu: ignore these extensions
 set wildmode=list:longest,full  " Complete till longest string, then open menu.
 
 set smartindent
+set paste
 
-  
 
 " set scrolljump=5                " lines to scroll when cursor leaves screen
 " set scrolloff=3                 " minimum lines to keep above and below cursor
@@ -142,11 +145,11 @@ noremap <S-Up> <Up>
 noremap <S-Down> <Down>
 
 if has('gui_running')
-  set guifont=Cousine\ Regular\ 11
+	set guifont=Cousine\ Regular\ 11
 endif
 
 if has('mouse')
-  set mouse=a
+	set mouse=a
 endif
 
 
@@ -164,8 +167,8 @@ set noswapfile
 
 set undofile
 if !isdirectory($HOME . "/.vim/undodir")
-  echo "create"
-  call mkdir($HOME . "/.vim/undodir", "p")
+	echo "create"
+	call mkdir($HOME . "/.vim/undodir", "p")
 endif
 set undodir=~/.vim/undodir//        " enable persistent-undo
 
@@ -211,7 +214,7 @@ let g:airline_theme = 'papercolor'
 " let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'  
 
 function! SwitchBuffer()
-  b#
+	b#
 endfunction
 
 nnoremap <leader><tab>  :call SwitchBuffer()<CR>
@@ -224,8 +227,8 @@ nnoremap <F5> :UndotreeToggle<cr>
 cnoreabbrev w update 
 
 function! UpdateQ()
-  update
-  quit
+	update
+	quit
 endfunction
 
 cnoreabbrev wq call UpdateQ()
@@ -242,29 +245,29 @@ autocmd FileType fish setlocal foldmethod=manual
 
 " follow symlinked file
 function! FollowSymlink()
-  let current_file = expand('%:p')
-  " check if file type is a symlink
-  if getftype(current_file) == 'link'
-    " if it is a symlink resolve to the actual file path
-    "   and open the actual file
-    let actual_file = resolve(current_file)
-    silent! execute 'file ' . actual_file
-  end
+	let current_file = expand('%:p')
+	" check if file type is a symlink
+	if getftype(current_file) == 'link'
+		" if it is a symlink resolve to the actual file path
+		"   and open the actual file
+		let actual_file = resolve(current_file)
+		silent! execute 'file ' . actual_file
+	end
 endfunction
 
 
 " set working directory to git project root
 " or directory of current file if not git project
 function! SetProjectRoot()
-  " default to the current file's directory
-  lcd %:p:h
-  let git_dir = system("git rev-parse --show-toplevel")
-  " See if the command output starts with 'fatal' (if it does, not in a git repo)
-  let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
-  " if git project, change local directory to git project root
-  if empty(is_not_git_dir)
-    lcd `=git_dir`
-  endif
+	" default to the current file's directory
+	lcd %:p:h
+	let git_dir = system("git rev-parse --show-toplevel")
+	" See if the command output starts with 'fatal' (if it does, not in a git repo)
+	let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
+	" if git project, change local directory to git project root
+	if empty(is_not_git_dir)
+		lcd `=git_dir`
+	endif
 endfunction
 
 
@@ -280,10 +283,10 @@ endfunction
 " (happens when dropping a file on gvim).
 "­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
 if has("auto md")
-  autocmd BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \ exe "normal! g`\"" |
-        \ endif
+	autocmd BufReadPost *
+				\ if line("'\"") > 0 && line("'\"") <= line("$") |
+				\ exe "normal! g`\"" |
+				\ endif
 endif " has("auto md")
 
 
@@ -306,6 +309,10 @@ map <leader>t<leader> :tabnext
 "autocmd FileType markdown set foldexpr=StackedMarkdownFolds()
 
 
-nnoremap <leader>p :History<CR>
+nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>t :Files<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>rg :Rg<CR>
+nnoremap <leader>m :FZFMru<CR>
+
+
