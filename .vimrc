@@ -1,41 +1,15 @@
 scriptencoding utf-8
 
 
+" If you set the 'encoding' option in your |.vimrc|,
+" `:scriptencoding` must be placed after that.
+set encoding=utf-8
+scriptencoding utf-8
+
 
 if &compatible
 	set nocompatible               " Be iMproved
 endif
-
-" Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
-
-" Declare the list of plugins.
-" Plug 'tpope/vim-sensible'
-
-Plug 'tpope/vim-commentary'
-Plug 'mbbill/undotree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'wimstefan/Lightning'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'pbogut/fzf-mru.vim'
-
-Plug 'dag/vim-fish'
-Plug 'godlygeek/tabular'
-Plug 'vim-scripts/restore_view.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'cespare/vim-toml'
-Plug 'tpope/vim-surround'
-" Plug 'spf13/vim-autoclose'
-Plug 'jiangmiao/auto-pairs'
-" Plug 'jlanzarotta/bufexplorer'
-" Plug 'yegappan/mru'
-"Plug 'ctrlpvim/ctrlp.vim'
-
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
-
 
 
 " Required:
@@ -43,120 +17,21 @@ filetype plugin indent on
 syntax enable
 
 
-
-if !has('nvim')
-	filetype off                  " required
-	filetype plugin on
-	filetype indent on
-
-	syntax on
-
-	set autoindent                     " copy indent from the previous line
-	set autoread                       " notice if a file was changed from the outside
-	set belloff=all                    " disable the bell
-
-	set complete-=i                    " don't scan current on included files for completion
-	set encoding=utf-8                 " set default encoding
-	set formatoptions=tcqj             " more intuitive autoformatting
-	set history=10000
+"let mapleader = '\<SPACE>'
+nnoremap <SPACE> <Nop>
+map <SPACE> <leader>
 
 
-	"   good tips: https://dougblack.io/words/a-good-vimrc.html
 
-	set number
-	set relativenumber
-
-
-	set autowrite                      " write a modified buffer on each :Next, ...
-	set hlsearch                       " highlight search results
-
-
-	" backspace=2 is the same as the following statement
-	set backspace=indent,eol,start     " modern backspace behavior
-
-	" set foldenable          " enable folding
-	" set foldlevelstart=10   " open most folds by default
-	" set foldnestmax=10      " 10 nested fold max
-	" set foldmethod=indent   " fold based on indent level
-	" set foldmethod=manual
-
-	let g:vim_markdown_folding_disabled = 1
-
-	set hidden 
-	set ignorecase                     " ignore case when searching
-	set incsearch                      " move cursor as you type when searching
-	set smartcase   " when searching try to be smart
-	set smarttab                       " tab setting aware <tab> key
-	set shiftwidth=2
-	set softtabstop=2
-	set tabstop=2
-	set ttyfast     " indicates that our connection is fast
-
-	set wildmenu                    " Enable enhanced tab autocomplete.
-	set lazyredraw          " redraw only when we need to.
-	set showmatch           " highlight matching [{()}]
+source $HOME/.vim/plug.vimrc
+source $HOME/.vim/plug_conf.vimrc
+source $HOME/.vim/filetypes.vimrc
+source $HOME/.vim/settings.vimrc
+source $HOME/.vim/mappings.vimrc
+source $HOME/.vim/look.vimrc
+source $HOME/.vim/misc.vimrc
 
 
-	" use system clipboard
-	"set clipboard=unnamed
-	set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
-
-	" colemak no special actions defined currently 
-	" noremap h <NOP>
-	" noremap j <NOP>
-	"    set langmap=li
-	" noremap k <NOP>
-	" noremap l <NOP>
-
-	" Be smart when using tabs ;)
-	set smarttab
-
-
-	" Linebreak on 100 characters
-	set lbr
-	set tw=100
-
-	set ai "Auto indent
-	set wrap "Wrap lines
-
-	" 
-	" differently set in nvim
-	"
-	set fsync                          " call fsync() for robust file saving
-	" langnoremap
-endif
-
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
-
-set wildignore=*.bak,*.o,*.e,*.pyc,*~ " wildmenu: ignore these extensions
-set wildmode=list:longest,full  " Complete till longest string, then open menu.
-
-set smartindent
-set paste
-
-
-" set scrolljump=5                " lines to scroll when cursor leaves screen
-" set scrolloff=3                 " minimum lines to keep above and below cursor
-" set scrollopt=ver,jump
-noremap <S-Up> <Up>
-noremap <S-Down> <Down>
-
-if has('gui_running')
-	set guifont=Cousine\ Regular\ 11
-endif
-
-if has('mouse')
-	set mouse=a
-endif
-
-
-" 
-" Save a file as root
-"
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null'
 
 
 " The // at the end of the directory name tells Vim to use the absolute path to the file 
@@ -175,38 +50,6 @@ set undodir=~/.vim/undodir//        " enable persistent-undo
 
 
 
-"let mapleader = '\<SPACE>'
-nnoremap <SPACE> <Nop>
-map <SPACE> <leader>
-
-
-
-
-
-"not sure I should set it
-"set t_Co=256			" 256 colors, terrible for most themes, but best for Tomorrow-Night
-
-" colorscheme delek   " too much of green
-colorscheme zellner
-" set background=dark " for the dark version
-"set background=light " for the light version
-
-"let g:airline_theme = 'solarized'
-"let g:airline_theme = 'tomorrow'
-let g:airline_theme = 'papercolor'
-
-
-
-" Suggested color names (these are available on most systems):
-"     Red		LightRed	DarkRed
-"     Green	LightGreen	DarkGreen	SeaGreen
-"     Blue	LightBlue	DarkBlue	SlateBlue
-"     Cyan	LightCyan	DarkCyan
-"     Magenta	LightMagenta	DarkMagenta
-"     Yellow	LightYellow	Brown		DarkYellow
-"     Gray	LightGray	DarkGray
-"     Black	White
-"     Orange	Purple		Violet
 
 "----------------- end configure vimwiki ---------------------------------------
 "
@@ -234,8 +77,6 @@ endfunction
 cnoreabbrev wq call UpdateQ()
 
 "
-" fish plugin: turn off automatic folding
-autocmd FileType fish setlocal foldmethod=manual
 
 
 
@@ -243,76 +84,9 @@ autocmd FileType fish setlocal foldmethod=manual
 " http://inlehmansterms.net/2014/09/04/sane-vim-working-directories/
 
 
-" follow symlinked file
-function! FollowSymlink()
-	let current_file = expand('%:p')
-	" check if file type is a symlink
-	if getftype(current_file) == 'link'
-		" if it is a symlink resolve to the actual file path
-		"   and open the actual file
-		let actual_file = resolve(current_file)
-		silent! execute 'file ' . actual_file
-	end
-endfunction
-
-
-" set working directory to git project root
-" or directory of current file if not git project
-function! SetProjectRoot()
-	" default to the current file's directory
-	lcd %:p:h
-	let git_dir = system("git rev-parse --show-toplevel")
-	" See if the command output starts with 'fatal' (if it does, not in a git repo)
-	let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
-	" if git project, change local directory to git project root
-	if empty(is_not_git_dir)
-		lcd `=git_dir`
-	endif
-endfunction
-
-
-
-" follow symlink and set working directory
-" autocmd BufRead *
-" \ call FollowSymlink() |
-" \ call SetProjectRoot()
-
-"­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
-" When editing a file, always jump to the last known ursor position.
-" Don't do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
-"­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
-if has("auto md")
-	autocmd BufReadPost *
-				\ if line("'\"") > 0 && line("'\"") <= line("$") |
-				\ exe "normal! g`\"" |
-				\ endif
-endif " has("auto md")
-
-
-" https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
-autocmd BufEnter * silent! lcd %:p:h
-" don't use it set autochdir                      " current directory is the same as the file being edited
-
 
 " 
 " moving around
-"
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
-
 
 "autocmd FileType markdown set foldexpr=StackedMarkdownFolds()
-
-
-nnoremap <leader>h :History<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>m :FZFMru<CR>
-
 
