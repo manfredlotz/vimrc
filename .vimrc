@@ -1,4 +1,3 @@
-scriptencoding utf-8
 
 
 " If you set the 'encoding' option in your |.vimrc|,
@@ -47,46 +46,5 @@ if !isdirectory($HOME . "/.vim/undodir")
 endif
 set undodir=~/.vim/undodir//        " enable persistent-undo
 
-
-
-
-
-"----------------- end configure vimwiki ---------------------------------------
-"
-
-" let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'  
-
-function! SwitchBuffer()
-	b#
-endfunction
-
-nnoremap <leader><tab>  :call SwitchBuffer()<CR>
-
-" ????? nnoremap <leader>wm resize
-
 nnoremap <F5> :UndotreeToggle<cr>
-
-" want to use update instead of write
-cnoreabbrev w update 
-
-function! UpdateQ()
-	update
-	quit
-endfunction
-
-cnoreabbrev wq call UpdateQ()
-
-"
-
-
-
-"
-" http://inlehmansterms.net/2014/09/04/sane-vim-working-directories/
-
-
-
-" 
-" moving around
-
-"autocmd FileType markdown set foldexpr=StackedMarkdownFolds()
 

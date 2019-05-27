@@ -4,6 +4,9 @@
 "
 
 
+"
+" http://inlehmansterms.net/2014/09/04/sane-vim-working-directories/
+"
 " follow symlinked file
 function! FollowSymlink()
 	let current_file = expand('%:p')
