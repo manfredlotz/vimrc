@@ -13,12 +13,18 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 
-Plug 'dag/vim-fish'
+Plug 'Soares/fish.vim'
+"Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'vim-scripts/restore_view.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
 Plug 'tpope/vim-surround'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'mtth/scratch.vim'
+Plug 'easymotion/vim-easymotion'
+"Plug 'haya14busa/incsearch.vim'
+
 " Plug 'spf13/vim-autoclose'
 Plug 'jiangmiao/auto-pairs'
 
