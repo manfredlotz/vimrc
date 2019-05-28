@@ -16,9 +16,17 @@ filetype plugin indent on
 syntax enable
 
 
-"let mapleader = '\<SPACE>'
-nnoremap <SPACE> <Nop>
-map <SPACE> <leader>
+   " " set leader key
+   "   let g:mapleader="\\"
+
+   " " alias for leader key
+   "   nmap <space> \
+   "   xmap <space> \
+
+
+" nnoremap <SPACE> <Nop>
+" map <SPACE> <leader>
+let mapleader = "\<space>"
 
 
 
@@ -41,7 +49,6 @@ set noswapfile
 
 set undofile
 if !isdirectory($HOME . "/.vim/undodir")
-	echo "create"
 	call mkdir($HOME . "/.vim/undodir", "p")
 endif
 set undodir=~/.vim/undodir//        " enable persistent-undo
