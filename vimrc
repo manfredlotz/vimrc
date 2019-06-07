@@ -1,8 +1,6 @@
 
 
 " If you set the 'encoding' option in your |.vimrc|,
-" `:scriptencoding` must be placed after that.
-set encoding=utf-8
 scriptencoding utf-8
 
 
@@ -12,20 +10,11 @@ endif
 
 
 " Required:
+filetype off                  " required
 filetype plugin indent on
 syntax enable
 
 
-   " " set leader key
-   "   let g:mapleader="\\"
-
-   " " alias for leader key
-   "   nmap <space> \
-   "   xmap <space> \
-
-
-" nnoremap <SPACE> <Nop>
-" map <SPACE> <leader>
 let mapleader = "\<space>"
 
 
@@ -41,8 +30,8 @@ source $HOME/.vim/misc.vimrc
 
 
 
-" The // at the end of the directory name tells Vim to use the absolute path to the file 
-" to create the swap file so there aren't collisions between files of the same name from 
+" The // at the end of the directory name tells Vim to use the absolute path to the file
+" to create the swap file so there aren't collisions between files of the same name from
 " different directories.
 "set directory^=~/.vim/tmp//
 set noswapfile
