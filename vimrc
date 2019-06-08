@@ -1,3 +1,13 @@
+" neovim related
+" ==============
+"
+" In case of problems
+" - run :checkhealth
+" - try to recreate by running `nvim -u NORC somefile`
+"
+" Interesting help information
+" - :h vim-differences
+" - :h nvim-defaults
 
 
 " If you set the 'encoding' option in your |.vimrc|,
