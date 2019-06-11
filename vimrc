@@ -25,7 +25,6 @@ endif
 filetype off                  " required
 filetype plugin indent on
 syntax enable
-mehr oder weniger
 
 let mapleader = "\<space>"
 
