@@ -8,9 +8,27 @@ Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wimstefan/Lightning'
+
+
+
+"
+" {{{ fzf
+"
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
+
+nnoremap <leader>h :History<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>rg :Rg<CR>
+nnoremap <leader>m :FZFMru<CR>
+
+"
+" }}} fzf 
+"
+
 
 Plug 'Soares/fish.vim'
 Plug 'godlygeek/tabular'
@@ -29,15 +47,25 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-perl/vim-perl'
 
 "
-" -------------------- deoplete ---------------------------
+" {{{ coc 
 "
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+
+" Or install latest release tag
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+
+
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+"
+" }}} coq 
+"
 
 
 " List ends here. Plugins become visible to Vim after this call.

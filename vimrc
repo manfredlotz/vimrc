@@ -3,7 +3,9 @@
 "
 " In case of problems
 " - run :checkhealth
-" - try to recreate by running `nvim -u NORC somefile`
+" - try to recreate by running `nvim -u NORC somefile`.
+"   - For `vim` it would be: `vim -u NONE somefile`
+"   - For `gvim` it would be: `gvim -U NONE somefile`
 "
 " Interesting help information
 " - :h vim-differences
@@ -23,14 +25,13 @@ endif
 filetype off                  " required
 filetype plugin indent on
 syntax enable
-
+mehr oder weniger
 
 let mapleader = "\<space>"
 
 
 
 source $HOME/.vim/plug.vimrc
-source $HOME/.vim/plug_conf.vimrc
 source $HOME/.vim/filetypes.vimrc
 source $HOME/.vim/settings.vimrc
 source $HOME/.vim/mappings.vimrc
