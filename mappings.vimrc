@@ -9,8 +9,8 @@ noremap <S-Down> <Down>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
 
 "
 " From: https://thoughtbot.com/upcase/videos/onramp-to-vim-configuration
@@ -27,7 +27,7 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 
 
 " want to use update instead of write
-cnoreabbrev w update 
+cnoreabbrev w update
 
 function! UpdateQ()
 	update
@@ -43,3 +43,10 @@ function! SwitchBuffer()
 endfunction
 
 nnoremap <leader><tab>  :call SwitchBuffer()<CR>
+
+
+"
+" skeletons
+"
+au BufNewFile *.md 0r ~/.vim/skeletons/md.skel | let IndentStyle = "md"
+
