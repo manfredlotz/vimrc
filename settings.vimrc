@@ -4,6 +4,8 @@ if !has('nvim')
 	set ttyfast     " indicates that our connection is fast
 end
 
+set hidden
+set signcolumn=yes
 set autoindent                     " copy indent from the previous line
 set autoread                       " notice if a file was changed from the outside
 " backspace=2 is the same as the following statement
