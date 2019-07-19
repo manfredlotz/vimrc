@@ -51,7 +51,8 @@ Plug 'vim-perl/vim-perl'
 "
 
 " Or install latest release tag
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 
