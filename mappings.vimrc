@@ -48,5 +48,5 @@ nnoremap <leader><tab>  :call SwitchBuffer()<CR>
 "
 " skeletons
 "
-au BufNewFile *.md 0r ~/.vim/skeletons/md.skel | let IndentStyle = "md"
+"au BufNewFile *.md 0r ~/.vim/skeletons/md.skel | let IndentStyle = "md"
 

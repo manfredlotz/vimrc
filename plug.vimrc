@@ -47,6 +47,18 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-perl/vim-perl'
 
 "
+" {{{ vim-templates
+"
+Plug 'tibabit/vim-templates'
+
+let g:tmpl_search_paths = ['~/.vim/templates']
+
+"
+" }}} vim-templates
+"
+
+
+"
 " {{{ coc 
 "
 
