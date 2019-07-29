@@ -1,6 +1,10 @@
-% {{CURSOR}}Some title
-% Manfred Lotz
-% {{YEAR}}-{{MONTH}}-{{DATE}}
+---
+title: {{CURSOR}}Some title
+subtitle: Some subtitle
+author: Manfred Lotz
+date: % {{YEAR}}-{{MONTH}}-{{DATE}}
+...
+
 
 # Overview
 
