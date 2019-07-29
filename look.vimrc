@@ -1,7 +1,7 @@
 
 
 if has('gui_running')
-	set guifont=Cousine\ Regular\ 11
+	set guifont=Cousine\ Regular\ 12
 endif
 
 if has('mouse')
