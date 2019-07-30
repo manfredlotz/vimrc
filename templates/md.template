@@ -2,7 +2,7 @@
 title: {{CURSOR}}Some title
 subtitle: Some subtitle
 author: Manfred Lotz
-date: % {{YEAR}}-{{MONTH}}-{{DATE}}
+date: {{YEAR}}-{{MONTH}}-{{DATE}}
 ...
 
 
