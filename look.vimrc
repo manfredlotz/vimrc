@@ -13,11 +13,15 @@ endif
 "not sure I should set it
 "set t_Co=256			" 256 colors, terrible for most themes, but best for Tomorrow-Night
 
-" colorscheme delek   " too much of green
-colorscheme zellner
+"colorscheme nova
+" set background=light " for the light version
 " set background=dark " for the dark version
+" colorscheme PaperColor
+
 "set background=light " for the light version
 
+colorscheme zellner
+"
 "let g:airline_theme = 'solarized'
 "let g:airline_theme = 'tomorrow'
 let g:airline_theme = 'papercolor'
