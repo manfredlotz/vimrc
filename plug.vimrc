@@ -42,7 +42,9 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'jiangmiao/auto-pairs'
 
-
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'sheerun/vim-polyglot'
+Plug 'trevordmiller/nova-vim'
 
 Plug 'vim-perl/vim-perl'
 
