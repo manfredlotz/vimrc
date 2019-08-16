@@ -7,9 +7,26 @@ Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" a color scheme
 Plug 'wimstefan/Lightning'
 
+""
+""{{{
 
+"Plug 'srstevenson/vim-picker'
+
+"nmap <leader>pe <Plug>(PickerEdit)
+"nmap <leader>ps <Plug>(PickerSplit)
+"nmap <leader>pt <Plug>(PickerTabedit)
+"nmap <leader>pv <Plug>(PickerVsplit)
+"nmap <leader>pb <Plug>(PickerBuffer)
+"nmap <leader>p] <Plug>(PickerTag)
+"nmap <leader>pw <Plug>(PickerStag)
+"nmap <leader>po <Plug>(PickerBufferTag)
+"nmap <leader>ph <Plug>(PickerHelp)
+
+""}}}
+""
 
 "
 " {{{ fzf
@@ -30,9 +47,24 @@ nnoremap <leader>m :FZFMru<CR>
 "
 
 
+"
+"{{{ vim-lastplace
+"
+
+Plug 'farmergreg/vim-lastplace'
+
+" By default these settings are active
+"   let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+"   let g:lastplace_ignore_buftype = "quickfix,nofile,help"
+
+"
+"}}}
+"
+
+
+
 Plug 'Soares/fish.vim'
 Plug 'godlygeek/tabular'
-Plug 'vim-scripts/restore_view.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
 Plug 'tpope/vim-surround'
@@ -57,15 +89,13 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 
 "
 " }}} vim-templates
-"
 
+"Plug 'zxqfl/tabnine-vim'
 
 "
 " {{{ coc 
 "
 
-" Or install latest release tag
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
