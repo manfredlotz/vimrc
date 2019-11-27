@@ -39,6 +39,10 @@ source $HOME/.vim/misc.vimrc
 
 
 
+#
+# in order to prevent gvim from crashing when selecting a large portion of a file of some 7MB
+# see also here: https://github.com/vim/vim/issues/1023
+set guioptions-=a
 
 " The // at the end of the directory name tells Vim to use the absolute path to the file
 " to create the swap file so there aren't collisions between files of the same name from
