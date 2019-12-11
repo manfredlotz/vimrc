@@ -10,4 +10,17 @@ au CursorHold * checktime
 " https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
 autocmd BufEnter * silent! lcd %:p:h
 " not quite sure if I should set `set autochdir` for this 
+"
 
+
+"   Hmmm, this doesn't seem to work properly
+"   Perhaps it is simply not required
+" au BufNewFile,BufRead *.py
+"     \ set tabstop=4
+"     \ set softtabstop=4
+"     \ set shiftwidth=4
+"     \ set textwidth=79
+"     \ set expandtab
+"     \ set autoindent
+"     \ set fileformat=unix
+"     \ let python_highlight_all=1
