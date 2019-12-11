@@ -90,7 +90,29 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 "
 " }}} vim-templates
 
+"
+" {{{ tabnine
+"
+
 Plug 'zxqfl/tabnine-vim'
+
+"
+" }}}
+"
+
+
+"
+" {{{ YouCompleteMe
+"
+
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+"
+" }}}
+"
+" Alternative:
+"   - YouCompleteMe
+"   - MUcomplete 
 
 "
 " {{{ coc 
