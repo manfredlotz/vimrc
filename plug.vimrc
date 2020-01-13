@@ -94,7 +94,9 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 " {{{ tabnine
 "
 
-Plug 'zxqfl/tabnine-vim'
+"   !!! Unfortunately, not yet usable as it happens that it need
+"       gigabytes of memory
+"Plug 'zxqfl/tabnine-vim'
 
 "
 " }}}
