@@ -15,6 +15,7 @@ set complete-=i                    " don't scan current on included files for co
 set formatoptions=tcqj             " more intuitive autoformatting
 set history=10000
 
+set updatetime=1000
 
 "   good tips: https://dougblack.io/words/a-good-vimrc.html
 
