@@ -102,6 +102,36 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 " }}}
 "
 
+"
+" {{{ deoplete
+"
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+let g:deoplete#enable_at_startup = 1
+
+
+
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
+"call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })
+
+
+"
+" }}} deoplete
+"
 
 "
 " {{{ YouCompleteMe
@@ -132,10 +162,10 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 "
 " }}} coq 
