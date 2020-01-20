@@ -31,6 +31,7 @@ Plug 'wimstefan/Lightning'
 "
 " {{{ fzf
 "
+"???? Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -114,12 +115,9 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 let g:deoplete#enable_at_startup = 1
 
 
@@ -162,10 +160,10 @@ Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
 
 "
 " }}} coq 
