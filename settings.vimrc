@@ -60,11 +60,12 @@ set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
 " ??? set clipboard+=unnamedplus
 
 
-set shiftwidth=2
-set shiftround
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
+
+set shiftround
 set ignorecase                     " ignore case when searching
 set smartcase   " when searching try to be smart
 set showmatch           " highlight matching [{()}]
