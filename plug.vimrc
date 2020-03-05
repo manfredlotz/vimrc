@@ -169,6 +169,10 @@ Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 " }}} coq 
 "
 
+Plug 'flazz/vim-colorschemes'
+
+
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
