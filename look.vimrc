@@ -18,14 +18,23 @@ endif
 " set background=dark " for the dark version
 " colorscheme PaperColor
 
-"set background=light " for the light version
-
+set background=light " for the light version
 colorscheme zellner
+"set background=dark " hyper or abyss
+
+"colorscheme xcodelighthc
+
+
+" set background=dark
+" colorscheme gruvbox
+" let g:gruvbox_termcolors=16
+
 "
 "let g:airline_theme = 'solarized'
 "let g:airline_theme = 'tomorrow'
-let g:airline_theme = 'papercolor'
-
+"colorscheme pencil
+" interesting schemes: jellyx
+"let g:airline_theme = 'papercolor'
 
 
 " Suggested color names (these are available on most systems):
