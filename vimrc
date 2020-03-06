@@ -37,7 +37,7 @@ source $HOME/.vim/mappings.vimrc
 source $HOME/.vim/look.vimrc
 source $HOME/.vim/misc.vimrc
 
-"source $HOME/.vim/plugged/colorstepper.vim
+source $HOME/.vim/plugged/colorstepper.vim
 
 "
 " in order to prevent gvim from crashing when selecting a large portion of a file of some 7MB
