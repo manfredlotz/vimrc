@@ -75,7 +75,7 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'NLKNguyen/papercolor-theme'
+"Plug 'NLKNguyen/papercolor-theme'
 Plug 'sheerun/vim-polyglot'
 Plug 'trevordmiller/nova-vim'
 
@@ -169,7 +169,7 @@ Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 " }}} coq 
 "
 
-Plug 'flazz/vim-colorschemes'
+Plug 'manfredlotz/vim-colorschemes'
 
 
 
