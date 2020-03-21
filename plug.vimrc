@@ -9,7 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " a color scheme
 Plug 'wimstefan/Lightning'
-
+Plug 'morhetz/gruvbox'
 ""
 ""{{{
 
@@ -75,9 +75,14 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'jiangmiao/auto-pairs'
 
-"Plug 'NLKNguyen/papercolor-theme'
+"
+
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'sheerun/vim-polyglot'
 Plug 'trevordmiller/nova-vim'
+Plug 'ayu-theme/ayu-vim'
+
+
 
 Plug 'vim-perl/vim-perl'
 
