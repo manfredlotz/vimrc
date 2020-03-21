@@ -28,6 +28,7 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 
 " want to use update instead of write
 cnoreabbrev w update
+cnoreabbrev w! update!
 
 function! UpdateQ()
 	update
