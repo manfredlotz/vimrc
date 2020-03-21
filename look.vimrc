@@ -18,18 +18,27 @@ endif
 " set background=dark " for the dark version
 " colorscheme PaperColor
 
-set background=light " for the light version
-colorscheme zellner
-"set background=dark " hyper or abyss
+" desertEx
+" donbass
 
-"colorscheme xcodelighthc
+" set background=light " for the light version
+" colorscheme tigrana-256-light
+
+"colorscheme desertEx
+"colorscheme desert256
+"colorscheme desertink
+"colorscheme Tomorrow
+"colorscheme kolor
 
 
+" The following is nice
+let g:background_contrast_dark='hard'
+let g:background_contrast_light='hard'
 " set background=dark
 " colorscheme gruvbox
-" let g:gruvbox_termcolors=16
 
-"
+colorscheme Dark2
+
 "let g:airline_theme = 'solarized'
 "let g:airline_theme = 'tomorrow'
 "colorscheme pencil
