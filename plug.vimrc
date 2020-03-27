@@ -71,7 +71,7 @@ Plug 'cespare/vim-toml'
 Plug 'tpope/vim-surround'
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'mtth/scratch.vim'
-Plug 'hauleth/vim-backscratch'
+" Plug 'manfredlotz/vim-backscratch'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'jiangmiao/auto-pairs'
