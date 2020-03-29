@@ -60,4 +60,4 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 
 " there was a problem calling this in `plug.vimrc` so we call it here
-call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })
+"call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })

@@ -103,7 +103,7 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 "   !!! Unfortunately, not yet usable as it happens that it need
 "       gigabytes of memory
 "Plug 'zxqfl/tabnine-vim'
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
 " }}}
 "
@@ -112,22 +112,22 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 " {{{ deoplete
 "
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
 
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 
 
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 "call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })
 
