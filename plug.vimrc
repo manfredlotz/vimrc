@@ -102,8 +102,8 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 
 "   !!! Unfortunately, not yet usable as it happens that it need
 "       gigabytes of memory
-"Plug 'zxqfl/tabnine-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'zxqfl/tabnine-vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
 " }}}
 "
