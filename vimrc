@@ -44,6 +44,12 @@ source $HOME/.vim/colorstepper.vim
 " see also here: https://github.com/vim/vim/issues/1023
 set guioptions-=a
 
+" currently it is required to set `bash` as shell because
+" otherwise `gx` which invokes `xdg-open` via `setsid` doesn't work
+set shell=/usr/bin/bash
+set guioptions+=!
+
+
 " The // at the end of the directory name tells Vim to use the absolute path to the file
 " to create the swap file so there aren't collisions between files of the same name from
 " different directories.
@@ -61,3 +67,6 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 " there was a problem calling this in `plug.vimrc` so we call it here
 "call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })
+"
+
+"let g:netrw_browsex_viewer = "firefox"
