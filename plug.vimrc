@@ -6,10 +6,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" a color scheme
-Plug 'wimstefan/Lightning'
-Plug 'morhetz/gruvbox'
+"Plug 'itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline-themes'
+" " a color scheme
+" Plug 'wimstefan/Lightning'
+" Plug 'morhetz/gruvbox'
 ""
 ""{{{
 
@@ -24,6 +25,8 @@ Plug 'morhetz/gruvbox'
 "nmap <leader>pw <Plug>(PickerStag)
 "nmap <leader>po <Plug>(PickerBufferTag)
 "nmap <leader>ph <Plug>(PickerHelp)
+
+Plug 'meatballs/vim-xonsh'
 
 ""}}}
 ""
@@ -77,10 +80,10 @@ Plug 'jiangmiao/auto-pairs'
 
 "
 
-Plug 'NLKNguyen/papercolor-theme'
+"Plug 'NLKNguyen/papercolor-theme'
 Plug 'sheerun/vim-polyglot'
 Plug 'trevordmiller/nova-vim'
-Plug 'ayu-theme/ayu-vim'
+"Plug 'ayu-theme/ayu-vim'
 
 
 
