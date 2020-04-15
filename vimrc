@@ -35,18 +35,15 @@ source $HOME/.vim/filetypes.vimrc
 source $HOME/.vim/settings.vimrc
 source $HOME/.vim/mappings.vimrc
 source $HOME/.vim/look.vimrc
-source $HOME/.vim/misc.vimrc
+" source $HOME/.vim/misc.vimrc
 
-source $HOME/.vim/colorstepper.vim
+"source $HOME/.vim/colorstepper.vim
 
 "
 " in order to prevent gvim from crashing when selecting a large portion of a file of some 7MB
 " see also here: https://github.com/vim/vim/issues/1023
 set guioptions-=a
 
-" currently it is required to set `bash` as shell because
-" otherwise `gx` which invokes `xdg-open` via `setsid` doesn't work
-set shell=/usr/bin/bash
 set guioptions+=!
 
 
@@ -68,5 +65,9 @@ nnoremap <F5> :UndotreeToggle<cr>
 " there was a problem calling this in `plug.vimrc` so we call it here
 "call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })
 "
+"
 
-"let g:netrw_browsex_viewer = "firefox"
+"https://html.developreference.com/article/15760941/How+to+make+the+gx+command+work+for+URLs+in+Vim+on+XFCE4+Desktop%3F
+" the following is required to make `gx` work
+let g:netrw_browsex_viewer="setsid xdg-open"
+
