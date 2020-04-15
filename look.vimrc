@@ -10,8 +10,12 @@ endif
 
 
 
-"not sure I should set it
-"set t_Co=256			" 256 colors, terrible for most themes, but best for Tomorrow-Night
+if !has('gui_running')
+  set t_Co=256
+endif
+
+
+
 
 "colorscheme nova
 " set background=light " for the light version
