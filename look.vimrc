@@ -1,7 +1,12 @@
 
 
 if has('gui_running')
-	set guifont=Cousine\ Regular\ 12
+    set guifont=Cousine\ Regular\ 12
+    set t_Co=256
+
+    " GUI is running or is about to start.
+    " Maximize gvim window (for an alternative on Windows, see simalt below).
+    set lines=39 columns=130
 endif
 
 if has('mouse')
@@ -10,38 +15,26 @@ endif
 
 
 
-if !has('gui_running')
-  set t_Co=256
-endif
-
-
 
 
 "colorscheme nova
-" set background=light " for the light version
-" set background=dark " for the dark version
-" colorscheme PaperColor
-
-" desertEx
-" donbass
-
-" set background=light " for the light version
-" colorscheme tigrana-256-light
-
-"colorscheme desertEx
-"colorscheme desert256
-"colorscheme desertink
-"colorscheme Tomorrow
-"colorscheme kolor
-
 
 " The following is nice
-let g:background_contrast_dark='hard'
-let g:background_contrast_light='hard'
+"let g:background_contrast_dark='hard'
+" let g:background_contrast_light='hard'
 " set background=dark
 " colorscheme gruvbox
+" colorscheme one
+" set background=dark " for the dark version
+" colorscheme OceanicNext
 
-colorscheme Dark2
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+set background=dark
+colorscheme PaperColor
+
 
 "let g:airline_theme = 'solarized'
 "let g:airline_theme = 'tomorrow'
