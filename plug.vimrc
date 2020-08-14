@@ -5,8 +5,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
-Plug 'vim-airline/vim-airline'
-"Plug 'itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 "Plug 'vim-airline/vim-airline-themes'
 " " a color scheme
 " Plug 'wimstefan/Lightning'

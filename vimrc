@@ -28,7 +28,8 @@ syntax enable
 
 let mapleader = "\<space>"
 
-
+" required for lightline status line
+set laststatus=2
 
 source $HOME/.vim/plug.vimrc
 source $HOME/.vim/filetypes.vimrc
