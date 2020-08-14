@@ -72,3 +72,4 @@ nnoremap <F5> :UndotreeToggle<cr>
 " the following is required to make `gx` work
 let g:netrw_browsex_viewer="setsid xdg-open"
 
+let g:ycm_autoclose_preview_window_after_insertion = 1
