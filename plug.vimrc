@@ -10,9 +10,15 @@ Plug 'itchyny/lightline.vim'
 "Plug 'vim-airline/vim-airline-themes'
 " " a color scheme
 " Plug 'wimstefan/Lightning'
-" Plug 'morhetz/gruvbox'
-""
+
+" Keep...
+Plug 'rakr/vim-one'
+Plug 'mhartington/oceanic-next'
+Plug 'NLKNguyen/papercolor-theme'
+
+
 ""{{{
+""
 
 "Plug 'srstevenson/vim-picker'
 
@@ -25,8 +31,6 @@ Plug 'itchyny/lightline.vim'
 "nmap <leader>pw <Plug>(PickerStag)
 "nmap <leader>po <Plug>(PickerBufferTag)
 "nmap <leader>ph <Plug>(PickerHelp)
-
-Plug 'meatballs/vim-xonsh'
 
 ""}}}
 ""
@@ -80,7 +84,6 @@ Plug 'jiangmiao/auto-pairs'
 
 "
 
-"Plug 'NLKNguyen/papercolor-theme'
 Plug 'sheerun/vim-polyglot'
 Plug 'trevordmiller/nova-vim'
 "Plug 'ayu-theme/ayu-vim'
@@ -105,6 +108,7 @@ let g:tmpl_search_paths = ['~/.vim/templates']
 
 "   !!! Unfortunately, not yet usable as it happens that it need
 "       gigabytes of memory
+"       last fix was successful, memory usage now ok
 Plug 'zxqfl/tabnine-vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
@@ -177,7 +181,7 @@ inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " }}} coq 
 "
 
-Plug 'manfredlotz/vim-colorschemes'
+"Plug 'manfredlotz/vim-colorschemes'
 
 
 
