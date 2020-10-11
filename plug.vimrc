@@ -18,6 +18,16 @@ Plug 'NLKNguyen/papercolor-theme'
 
 
 ""{{{
+"
+
+Plug 'terryma/vim-multiple-cursors'
+
+"
+"}}}"
+
+
+
+""{{{
 ""
 
 "Plug 'srstevenson/vim-picker'
@@ -40,15 +50,22 @@ Plug 'NLKNguyen/papercolor-theme'
 "
 "???? Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'pbogut/fzf-mru.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+" Plug 'pbogut/fzf-mru.vim'
+"
+
+Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+Plug 'lotabout/skim.vim'
 
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>m :FZFMru<CR>
+" nnoremap <leader>m :FZFMru<CR>
+
+nnoremap <leader>m :History<CR>
+
 
 "
 " }}} fzf 
