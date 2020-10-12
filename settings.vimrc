@@ -13,7 +13,7 @@ set backspace=indent,eol,start     " modern backspace behavior
 set belloff=all                    " disable the bell
 set complete-=i                    " don't scan current on included files for completion
 set formatoptions=tcqj             " more intuitive autoformatting
-set history=10000
+set history=500
 
 set updatetime=1000
 
