@@ -67,8 +67,14 @@ nnoremap <leader>rg :Rg<CR>
 nnoremap <leader>m :History<CR>
 
 
+" Enable per-command history
+" - History files will be stored in the specified directory
+" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
+"   'previous-history' instead of 'down' and 'up'.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
 "
-" }}} fzf 
+" }}} fzf
 "
 
 
@@ -171,10 +177,10 @@ inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 "
 " Alternative:
 "   - YouCompleteMe
-"   - MUcomplete 
+"   - MUcomplete
 
 "
-" {{{ coc 
+" {{{ coc
 "
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -195,7 +201,7 @@ inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " endfunction
 
 "
-" }}} coq 
+" }}} coq
 "
 
 "Plug 'manfredlotz/vim-colorschemes'
