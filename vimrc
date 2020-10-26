@@ -47,6 +47,11 @@ set guioptions-=a
 
 set guioptions+=!
 
+" Disable menu
+set guioptions-=m
+" Disable toolbar
+set guioptions-=T
+
 
 " The // at the end of the directory name tells Vim to use the absolute path to the file
 " to create the swap file so there aren't collisions between files of the same name from

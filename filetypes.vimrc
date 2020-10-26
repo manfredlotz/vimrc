@@ -2,9 +2,13 @@
 " fish plugin: turn off automatic folding
 autocmd FileType fish setlocal foldmethod=manual
 
+
+" The following disabled now as I think that `set autoread`
+" is sufficient
+" Manfred Lotz, October 23 2020
 " in companion with `set autoread` this makes sure that a file
 " gets reloaded if changed outside of vim
-au CursorHold * checktime
+"au CursorHold * checktime
 
 
 " https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
