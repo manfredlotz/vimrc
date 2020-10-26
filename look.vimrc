@@ -1,7 +1,9 @@
 
 
+"set guifont=FiraCode:h13
 if has('gui_running')
-    set guifont=Cousine\ Regular\ 12
+    set guifont=Cousine\ Regular\ 13
+    set guifont=Roboto\ Mono\ 13
     set t_Co=256
 
     " GUI is running or is about to start.
