@@ -6,6 +6,12 @@ if has('gui_running')
     set guifont=Roboto\ Mono\ 13
     set t_Co=256
 
+    "
+    " Disable menu (m) and toolbar (T)
+    "
+    set guioptions-=m
+    set guioptions-=T
+
     " GUI is running or is about to start.
     " Maximize gvim window (for an alternative on Windows, see simalt below).
     set lines=39 columns=130
@@ -16,20 +22,6 @@ if has('mouse')
 endif
 
 
-
-
-
-"colorscheme nova
-
-" The following is nice
-"let g:background_contrast_dark='hard'
-" let g:background_contrast_light='hard'
-" set background=dark
-" colorscheme gruvbox
-" colorscheme one
-" set background=dark " for the dark version
-" colorscheme OceanicNext
-
 if (has("termguicolors"))
     set termguicolors
 endif
@@ -38,15 +30,8 @@ set background=dark
 colorscheme PaperColor
 
 
-"let g:airline_theme = 'solarized'
-"let g:airline_theme = 'tomorrow'
-"colorscheme pencil
-" interesting schemes: jellyx
-"let g:airline_theme = 'papercolor'
-
-
 " Suggested color names (these are available on most systems):
-"     Red		LightRed	DarkRed
+"     Red	LightRed	DarkRed
 "     Green	LightGreen	DarkGreen	SeaGreen
 "     Blue	LightBlue	DarkBlue	SlateBlue
 "     Cyan	LightCyan	DarkCyan

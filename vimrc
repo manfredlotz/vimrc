@@ -28,53 +28,20 @@ syntax enable
 
 let mapleader = "\<space>"
 
-" required for lightline status line
-set laststatus=2
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
 
-source $HOME/.vim/plug.vimrc
-source $HOME/.vim/filetypes.vimrc
+
 source $HOME/.vim/settings.vimrc
+source $HOME/.vim/plug.vimrc
 source $HOME/.vim/mappings.vimrc
 source $HOME/.vim/look.vimrc
-" source $HOME/.vim/misc.vimrc
-
-"source $HOME/.vim/colorstepper.vim
-
-"
-" in order to prevent gvim from crashing when selecting a large portion of a file of some 7MB
-" see also here: https://github.com/vim/vim/issues/1023
-set guioptions-=a
-
-set guioptions+=!
-
-" Disable menu
-set guioptions-=m
-" Disable toolbar
-set guioptions-=T
 
 
-" The // at the end of the directory name tells Vim to use the absolute path to the file
-" to create the swap file so there aren't collisions between files of the same name from
-" different directories.
-"set directory^=~/.vim/tmp//
-set noswapfile
 
-set undofile
-if !isdirectory($HOME . "/.vim/undodir")
-	call mkdir($HOME . "/.vim/undodir", "p")
-endif
-set undodir=~/.vim/undodir//        " enable persistent-undo
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
-nnoremap <F5> :UndotreeToggle<cr>
-
-
-" there was a problem calling this in `plug.vimrc` so we call it here
-"call deoplete#custom#var('tabnine', { 'line_limit': 500, 'max_num_results': 20, })
-"
-"
-
-"https://html.developreference.com/article/15760941/How+to+make+the+gx+command+work+for+URLs+in+Vim+on+XFCE4+Desktop%3F
-" the following is required to make `gx` work
-let g:netrw_browsex_viewer="setsid xdg-open"
-
-let g:ycm_autoclose_preview_window_after_insertion = 1

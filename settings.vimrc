@@ -15,7 +15,7 @@ set complete-=i                    " don't scan current on included files for co
 set formatoptions=tcqj             " more intuitive autoformatting
 set history=10000
 
-set updatetime=1000
+set updatetime=100
 
 "   good tips: https://dougblack.io/words/a-good-vimrc.html
 
@@ -57,8 +57,6 @@ set tw=100
 " use system clipboard
 set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
 
-" ??? set clipboard+=unnamedplus
-
 
 set shiftwidth=4
 set softtabstop=4
@@ -88,4 +86,11 @@ set smartindent
 if has('nvim')
 	set inccommand=nosplit
 end
+
+"
+" Enable persistent-undo
+"
+set undofile
+set undodir=~/.vim/undodir/        " enable persistent-undo
+
 
