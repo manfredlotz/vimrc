@@ -88,6 +88,7 @@ Plug 'godlygeek/tabular'
 
 Plug 'farmergreg/vim-lastplace'
 
+
 "
 " {----------------------------------------------------------------
 "
@@ -134,13 +135,19 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 "
 " {----------------------------------------------------------------
 "
+" Offers scratch buffer functionality
 
 Plug 'manfredlotz/scratch.vim'
 
 
 
+"
+" {----------------------------------------------------------------
+"
+" File system explorer for the vim editor
+" See also here: https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
+
 Plug 'preservim/nerdtree'
-" https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
 
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -158,10 +165,21 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 "
 " {----------------------------------------------------------------
 "
+" The plugin is all about "surroundings": parentheses, brackets, quotes, 
+" XML tags, and more. The plugin provides mappings to easily delete, 
+" change and add such surroundings in pairs.
 
 Plug 'tpope/vim-surround'
 
+"
+" {----------------------------------------------------------------
+"
+" Opens URLs on the current line in your default browser via the OS X open
+" command, or another command you specify.
+" Requires ruby to be installed
+
 Plug 'henrik/vim-open-url'
+" Need to specify the open command as the default `open` is for OS X only
 let g:open_url_browser="xdg-open"
 
 
@@ -169,13 +187,3 @@ let g:open_url_browser="xdg-open"
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-
-
-"
-" {
-"
-
-
-"
-" }
-"
