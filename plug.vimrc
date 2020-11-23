@@ -72,6 +72,17 @@ Plug 'tomtom/tcomment_vim'
 " Displaying indentation levels
 
 Plug 'Yggdroot/indentLine'
+let g:indentLine_fileTypeExclude = ['markdown']
+
+"
+" This is an alternative plugin which also
+" could be taken here
+"
+" Plug 'nathanaelkane/vim-indent-guides'
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_color_change_percent = 30
+" let g:indent_guides_color_exclude_filetypes = ['markdown']
 
 
 "
@@ -165,8 +176,8 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 "
 " {----------------------------------------------------------------
 "
-" The plugin is all about "surroundings": parentheses, brackets, quotes, 
-" XML tags, and more. The plugin provides mappings to easily delete, 
+" The plugin is all about "surroundings": parentheses, brackets, quotes,
+" XML tags, and more. The plugin provides mappings to easily delete,
 " change and add such surroundings in pairs.
 
 Plug 'tpope/vim-surround'
