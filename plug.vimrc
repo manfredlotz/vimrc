@@ -1,4 +1,6 @@
-
+"
+" {----------------------------------------------------------------
+"
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
@@ -191,10 +193,46 @@ Plug 'tpope/vim-surround'
 
 Plug 'henrik/vim-open-url'
 " Need to specify the open command as the default `open` is for OS X only
-let g:open_url_browser="xdg-open"
+let g:open_url_browser="gnome-open"
+" Trigger with <leader>u or :OpenURL.
+
+
+"
+" {----------------------------------------------------------------
+"
+" Add icons to your plugins
+
+Plug 'ryanoasis/vim-devicons'
+
+
+"
+" {----------------------------------------------------------------
+"
+" This plugin provides a start screen for Vim and Neovim.
+ 
+Plug 'mhinz/vim-startify'
 
 
 
+"
+" {----------------------------------------------------------------
+"
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+
+
+
+"
+"
+" Not sure about the following
+"
+"
+
+" " vim-which-key is vim port of emacs-which-key that displays available
+" " keybindings in popup.
+"
+" " On-demand lazy load
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
