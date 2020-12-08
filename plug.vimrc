@@ -22,6 +22,9 @@ Plug 'itchyny/lightline.vim'
 
 set laststatus=2
 
+" Get rid of -- INSERT -- as INSERT is already shown in the statusline
+set noshowmode
+
 
 "
 " {----------------------------------------------------------------
@@ -209,9 +212,32 @@ Plug 'ryanoasis/vim-devicons'
 " {----------------------------------------------------------------
 "
 " This plugin provides a start screen for Vim and Neovim.
- 
+
 Plug 'mhinz/vim-startify'
 
+
+" Automatically clear highlight (|:nohlsearch|) after cursor
+" moved and some other autocmd event.
+Plug 'haya14busa/is.vim'
+
+" ???? not sure yet
+"Plug 'justinmk/vim-sneak'
+"let g:sneak#label = 1
+
+
+
+" " An always-on highlight for a unique character in every word
+" " on a line to help you use f, F and family.
+" Plug 'unblevable/quick-scope'
+" " Trigger a highlight in the appropriate direction when pressing these keys:
+" let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" augroup qs_colors
+"   autocmd!
+"   autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+"   autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+" augroup END
+
+Plug 'rhysd/clever-f.vim'
 
 
 "
@@ -229,6 +255,14 @@ call plug#end()
 "
 "
 
+
+"Plug 'dense-analysis/ale'
+
+" Enable ESLint only for JavaScript.
+"let b:ale_linters = ['eslint']
+
+
+
 " " vim-which-key is vim port of emacs-which-key that displays available
 " " keybindings in popup.
 "
@@ -236,3 +270,6 @@ call plug#end()
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
+" An easymotion alternative
+" Not sure I need it but it is a very good alternative
+"Plug 'zsugabubus/vim-jumpmotion'
