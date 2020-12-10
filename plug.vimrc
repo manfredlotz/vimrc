@@ -31,8 +31,11 @@ set noshowmode
 "
 " Offers advanced AI based autocompletion
 
-Plug 'zxqfl/tabnine-vim'
+"Plug 'zxqfl/tabnine-vim'
 
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tabnine'
 
 "
 " {----------------------------------------------------------------
