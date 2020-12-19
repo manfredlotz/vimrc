@@ -93,4 +93,30 @@ end
 set undofile
 set undodir=~/.vim/undodir/        " enable persistent-undo
 
+set spellfile=~/.vim/spell/en.utf-8.add
+" map <F8>  :setlocal spell spelllang=de <return>
 
+
+
+
+" wget -P ~/.vim/spell/ http://ftp.vim.org/vim/runtime/spell/de.utf-8.sug
+" wget -P ~/.vim/spell/ http://ftp.vim.org/vim/runtime/spell/de.utf-8.spl
+
+"
+" https://vim.fandom.com/wiki/Toggle_spellcheck_with_function_keys
+"
+"switch spellcheck languages
+let g:myLang = 0
+let g:myLangList = [ "nospell", "de_de", "en_us" ]
+function! MySpellLang()
+  "loop through languages
+  let g:myLang = g:myLang + 1
+  if g:myLang >= len(g:myLangList) | let g:myLang = 0 | endif
+  if g:myLang == 0 | set nospell | endif
+  if g:myLang == 1 | setlocal spell spelllang=de_de | endif
+  if g:myLang == 2 | setlocal spell spelllang=en_us | endif
+  echo "language:" g:myLangList[g:myLang]
+endf
+
+map <F7> :call MySpellLang()<CR>
+imap <F7> <C-o>:call MySpellLang()<CR>
