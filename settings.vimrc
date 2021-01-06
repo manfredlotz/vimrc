@@ -29,6 +29,24 @@ set hlsearch                       " highlight search results
 
 let g:vim_markdown_folding_disabled = 1
 
+
+" Stop certain movements from always going to the first character of a line.
+" While this behaviour deviates from that of Vi, it does what most users
+" coming from other editors would expect.
+set nostartofline
+
+" Use visual bell instead of beeping when doing something wrong
+set visualbell
+" And reset the terminal code for the visual bell. If visualbell is set, and
+" this line is also included, vim will neither flash nor beep. If visualbell
+" is unset, this does nothing.
+set t_vb=
+
+" Set the command window height to 2 lines, to avoid many cases of having to
+" press <Enter> to continue
+set cmdheight=2
+
+
 set incsearch                      " move cursor as you type when searching
 set smarttab                       " tab setting aware <tab> key
 
@@ -53,14 +71,16 @@ set lbr
 set tw=100
 
 
+if has('unnamedplus')
+  " use system clipboard
+  set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
+end
 
-" use system clipboard
-set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
 
 
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set expandtab
 
 set shiftround
@@ -93,11 +113,12 @@ end
 set undofile
 set undodir=~/.vim/undodir/        " enable persistent-undo
 
+
+"
+" spell checking
+"
 set spellfile=~/.vim/spell/en.utf-8.add
 " map <F8>  :setlocal spell spelllang=de <return>
-
-
-
 
 " wget -P ~/.vim/spell/ http://ftp.vim.org/vim/runtime/spell/de.utf-8.sug
 " wget -P ~/.vim/spell/ http://ftp.vim.org/vim/runtime/spell/de.utf-8.spl
@@ -120,3 +141,6 @@ endf
 
 map <F7> :call MySpellLang()<CR>
 imap <F7> <C-o>:call MySpellLang()<CR>
+
+
+
