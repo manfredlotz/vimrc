@@ -29,6 +29,16 @@ set noshowmode
 "
 " {----------------------------------------------------------------
 "
+" A vim plugin to keep a simple diary
+"
+Plug 'ryot4/diary.vim'
+" diary location
+let g:diary_dir = expand('~/Sync/diary')
+
+
+"
+" {----------------------------------------------------------------
+"
 " tabnine: Offers advanced AI based autocompletion
 if IsOnMainframe()
   Plug 'maxboisvert/vim-simple-complete'
@@ -262,10 +272,10 @@ Plug 'farmergreg/vim-lastplace'
 "
 " {----------------------------------------------------------------
 "
+" A simple template plugin
 
-Plug 'tibabit/vim-templates'
-let g:tmpl_search_paths = ['~/.vim/templates']
-
+Plug 'aperezdc/vim-template'
+let g:templates_directory = ['~/.vim/templates', '~/.vim/templates/diary']
 
 "
 " {----------------------------------------------------------------
