@@ -34,6 +34,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
+function! IsOnMainframe()
+  if stridx($HOST, "stutvs") == 0
+    return v:true
+  endif
+
+  return v:false
+endfunction
+
+if IsOnMainframe()
+  set t_RV=
+endif
 
 source $HOME/.vim/settings.vimrc
 source $HOME/.vim/plug.vimrc

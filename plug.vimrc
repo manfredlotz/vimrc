@@ -30,7 +30,9 @@ set noshowmode
 " {----------------------------------------------------------------
 "
 " tabnine: Offers advanced AI based autocompletion
-
+if IsOnMainframe()
+  Plug 'maxboisvert/vim-simple-complete'
+else
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Give more space for displaying messages.
@@ -184,6 +186,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
+endif
 
 "
 " {----------------------------------------------------------------
