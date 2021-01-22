@@ -4,7 +4,7 @@ titlepage: true
 subtitle: Some subtitle
 toc: true
 author: Manfred Lotz
-date: %YEAR%-%MONTH%-%DATE%
+date: %DATE%
 ...
 
 
