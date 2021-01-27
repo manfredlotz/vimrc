@@ -1,10 +1,18 @@
-#!/usr/bin/env python3
+#! /usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+# vim:fenc=utf-8
+#
+# Copyright © %YEAR% %USER% <%MAIL%>
+#
+# Distributed under terms of the %LICENSE% license.
+
+"""
+%HERE%
+"""
 
 
 import typer
-
-%HERE%
-
 
 def main() -> None:
     print("Do something")
@@ -12,3 +20,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     typer.run(main)
+
