@@ -34,7 +34,7 @@ set noshowmode
 Plug 'ryot4/diary.vim'
 " diary location
 let g:diary_dir = expand('~/Sync/diary')
-
+let g:email = 'manfred.lotz@posteo.de'
 
 "
 " {----------------------------------------------------------------
